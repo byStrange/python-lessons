@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 
     //initially if rtl add switcher rtl:
     if( $( "html" ).attr("dir") == "rtl" ) {
-       $('<link href="color-switcher/css/color-switcher-rtl.css" rel="stylesheet" type="text/css" id="link-switcher-rtl">').appendTo('body');
+       $('<link href="/static/color-switcher/css/color-switcher-rtl.css" rel="stylesheet" type="text/css" id="link-switcher-rtl">').appendTo('body');
         // Style switcher (ACTIVE)
         $('#style-switcher').animate({
             right: '-270px'
@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
     //1. Theme Skins Color change (ACTIVE):
     $('#switcher-theme-custom-color li a').on('click', function(e) {
         if($("#link-colors-style").length == 0) {
-            $('<link href="" rel="stylesheet" type="text/css" id="link-colors-style">').appendTo('body');
+            $('<link href="/static/" rel="stylesheet" type="text/css" id="link-colors-style">').appendTo('body');
         }
         var color_code = $(this).attr('class');
         $(this).parent().parent().find('li').removeClass('active');
@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
         var valueSelected = this.value;
 
         if($("#menuzord-menu-skins").length == 0) {
-            $('<link href="" rel="stylesheet" type="text/css" id="menuzord-menu-skins">').appendTo('body');
+            $('<link href="/static/" rel="stylesheet" type="text/css" id="menuzord-menu-skins">').appendTo('body');
         }
         $("#menuzord-menu-skins").attr("href", menuzord_skins_folder_url + valueSelected +".css?"+ makeTimeStamp() );
 
@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
         $('body').css('font-family', splttedval[0]);
         
         $( "#link-body-font-family" ).remove();
-        $('<link href="'+splttedval[1]+'" rel="stylesheet" type="text/css" id="link-body-font-family">').appendTo('body');
+        $('<link href="/static/'+splttedval[1]+'" rel="stylesheet" type="text/css" id="link-body-font-family">').appendTo('body');
     });
 
     //7. Heading Font-Family (ACTIVE):  
@@ -184,7 +184,7 @@ jQuery(document).ready(function($) {
         $('h1,h2,h3,h4,h5,h6').css('font-family', splttedval[0]);
         
         $( "#link-heading-font-family" ).remove();
-        $('<link href="'+splttedval[1]+'" rel="stylesheet" type="text/css" id="link-heading-font-family">').appendTo('body');
+        $('<link href="/static/'+splttedval[1]+'" rel="stylesheet" type="text/css" id="link-heading-font-family">').appendTo('body');
     });
 
     //8. Background Color Dark/Light (ACTIVE):  
@@ -194,7 +194,7 @@ jQuery(document).ready(function($) {
         if( bgcolor == "dark" ) {
             $('body').addClass('dark');
             $( "#link-style-main-dark" ).remove();
-            $('<link href="css/style-main-dark.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-dark">').appendTo('body');
+            $('<link href="/static/css/style-main-dark.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-dark">').appendTo('body');
             $('#header .menuzord-brand img').attr('src','images/logo-wide-white.png');
         } else if( bgcolor == "light" ) {
             $('body').removeClass('dark');
@@ -213,10 +213,10 @@ jQuery(document).ready(function($) {
             $( "#link-style-main-rtl" ).remove();
             $( "#link-style-main-rtl-extra" ).remove();
             $( "#link-switcher-rtl" ).remove();
-            $('<link href="css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" id="link-bootstrap-rtl">').appendTo('body');
-            $('<link href="css/style-main-rtl.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-rtl">').appendTo('body');
-            $('<link href="css/style-main-rtl-extra.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-rtl-extra">').appendTo('body');
-            $('<link href="color-switcher/css/color-switcher-rtl.css" rel="stylesheet" type="text/css" id="link-switcher-rtl">').appendTo('body');
+            $('<link href="/static/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" id="link-bootstrap-rtl">').appendTo('body');
+            $('<link href="/static/css/style-main-rtl.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-rtl">').appendTo('body');
+            $('<link href="/static/css/style-main-rtl-extra.css?'+ makeTimeStamp() +'" rel="stylesheet" type="text/css" id="link-style-main-rtl-extra">').appendTo('body');
+            $('<link href="/static/color-switcher/css/color-switcher-rtl.css" rel="stylesheet" type="text/css" id="link-switcher-rtl">').appendTo('body');
             
             switcherRebuildOwlCarousel();
 

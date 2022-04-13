@@ -59,7 +59,7 @@
                <div class="row align-items-center">
                   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                      <div class="logo">
-                        <a href="/static/index.html">
+                        <a href="/">
                         <img src="/static/assets/img/logo/logo.png" alt="logo">
                         </a>
                      </div>
@@ -68,42 +68,19 @@
                      <div class="main-menu">
                         <nav id="mobile-menu">
                            <ul>
-                              <li class="has-dropdown active">
-                                 <a href="/static/index.html">Home</a>
-                                 <ul class="submenu">
-                                    <li><a href="/static/index.html">Home Wordpress</a></li>
-                                    <li><a href="/static/index-2.html">Home Plugins</a></li>
-                                 </ul>
+                              <li>
+                                 <a href="/">Home</a>
                               </li>
-                              <li class="has-dropdown">
-                                 <a href="/static/product.html">Themes</a>
-                                 <ul class="submenu">
-                                    <li><a href="/static/product.html">Product</a></li>
-                                    <li><a href="/static/product-details.html">Product Details</a></li>
-                                 </ul>
+                              <li>
+                                 <a href="{% url 'app:product' %}">Product</a>
                               </li>
-                              <li><a href="/static/product.html">HTML</a></li>
-                              <li><a href="/static/support.html">Support</a></li>
-                              <li  class="has-dropdown">
-                                 <a href="/static/product.html">pages</a>
-
-                                 <ul class="submenu">
-                                    <li><a href="/static/about.html">About</a></li>
-                                    <li><a href="/static/documentation.html">Documentation</a></li>
-                                    <li><a href="/static/pricing.html">Pricing</a></li>
-                                    <li><a href="/static/sign-up.html">Sign Up</a></li>
-                                    <li><a href="/static/sign-in.html">Log In</a></li>
-                                 </ul>
+                              <li><a href="{% url 'app:support' %}">Support</a></li>
+                              <li><a href="{% url 'app:about' %}">About</a></li>
+                              <li><a href="{% url 'app:docs' %}">Documentation</a></li>
+                              <li>
+                                 <a href="{% url 'app:blog' %}">Blog</a>
                               </li>
-                              <li class="has-dropdown">
-                                 <a href="/static/blog.html">Blog</a>
-
-                                 <ul class="submenu">
-                                    <li><a href="/static/blog.html">Blog</a></li>
-                                    <li><a href="/static/blog-details.html">Blog Details</a></li>
-                                 </ul>
-                              </li>
-                              <li><a href="/static/contact.html">Contact</a></li>
+                              <li><a href="{% url 'app:contact' %}">Contact</a></li>
                            </ul>
                         </nav>
                      </div>
