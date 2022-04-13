@@ -1,0 +1,91 @@
+/*----------------------------------------*/
+/*  17. DOCUMENTATION CSS START
+/*----------------------------------------*/
+
+.documentation{
+    &__search{
+        &-input{
+            position: relative;
+            & > span{
+                position: absolute;
+                top: 49%;
+                @include transform(translateY(-50%));
+                left: 20px;
+                font-size: 16px;
+                color: $grey-4;
+            }
+            & input{
+                width: 420px;
+                height: 60px;
+                line-height: 56px;
+                padding: 0 20px;
+                padding-left: 45px;
+                border: 2px solid $white;
+                @include border-radius(6px);
+                @include box-shadow(0px 30px 70px 0px rgba(8, 0, 42, 0.14));
+                &::placeholder{
+                    color: $grey-4;
+                }
+                &:focus{
+                    border-color: $m-blue;
+                    outline: none;
+                }
+                @media #{$sm}{
+                    width: 330px;
+                }
+                @media #{$xs}{
+                    width: 290px;
+                }
+            }
+        }
+        & button{
+
+            @media #{$xs}{
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+    &__item{
+        padding: 50px 36px;
+        @include border-radius(10px);
+        @include box-shadow(0px 30px 40px 0px rgba(122, 13, 86, 0.2));
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        -moz-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        -ms-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        -o-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        &:hover{
+            @include transform(translateY(-10px) translate3d(0,-10px,0));
+        }
+
+        @media #{$lg}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media #{$md}{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    &__title{
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 12px;
+    }
+    &__content{
+        & p{
+            font-size: 14px;
+            line-height: 22px;
+            color: $white;
+            opacity: .7;
+            margin-bottom: 0;
+        }
+    }
+}

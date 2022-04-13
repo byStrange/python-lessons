@@ -1,0 +1,113 @@
+/*----------------------------------------*/
+/*  05. TRENDING CSS START
+/*----------------------------------------*/
+
+.trending{
+    &__title{
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 7px;
+        margin-top: 5px;
+        & a{
+            &:hover{
+                color: $m-blue;
+            }
+        }
+        &-2{
+            margin-bottom: 0;
+        }
+    }
+    &__item{
+        padding: 14px;
+        padding-right: 30px;
+        @include border-radius(6px);
+        @include box-shadow(0px 20px 50px 0px rgba(8, 0, 42, 0.08));
+        @media #{$xs}{
+           padding-right: 14px;
+           padding: 20px;
+        }
+        &-2{
+            background: $grey-6;
+            @include box-shadow(none);
+            border: 1px solid $border-4;
+            &:hover{
+                @include box-shadow(0px 20px 50px 0px rgba(8, 0, 42, 0.08));
+                border-color: $white;
+                background: $white;
+            }
+        }
+        &:hover{
+            & .trending__thumb{
+                & img{
+                    @include transform(scale(1.2));
+                }
+            }
+        }
+    }
+    &__thumb{
+        @media #{$xs}{
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &-inner{
+            border: 1px solid $grey-3;
+            @include border-radius(6px);
+        }
+        & img{
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__content{
+        & p{
+            font-size: 14px;
+            line-height: 20px;
+            padding-right: 20px;
+            margin-bottom: 12px;
+        }
+        @media #{$xs}{
+            padding: 0 10px;
+        }
+    }
+    &__tag{
+        & a{
+            display: inline-block;
+            height: 22px;
+            line-height: 18px;
+            padding: 0 7px;
+            font-size: 13px;
+            background: $grey-5;
+            font-weight: 600;
+            @include border-radius(4px);
+            text-transform: capitalize;
+            &:hover{
+                background: $m-blue;
+                color: $white;
+            }
+        }
+        &-2{
+            margin-bottom: 15px;
+        }
+    }
+    &__price{
+        & span{
+            font-size: 20px;
+            font-weight: 600;
+            color: $m-blue;
+            &.old-price{
+                text-decoration: line-through;
+                font-size: 16px;
+                color: $grey-4;
+            }
+        }
+    }
+    &__author{
+        & p{
+            margin-bottom: 0;
+            & a:hover{
+                color: $m-blue;
+            }
+        }
+    }
+}

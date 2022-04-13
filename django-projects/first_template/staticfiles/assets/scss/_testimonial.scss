@@ -1,0 +1,157 @@
+/*----------------------------------------*/
+/*  10. TESTIMONIAL CSS START
+/*----------------------------------------*/
+
+.testimonial{
+    &__shape{
+        & img{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+    &__slider{
+        & .owl-stage-outer{
+            overflow: visible;
+            & .owl-item{
+                opacity: 0;
+                transition: opacity .5s;
+                &.active{
+                    opacity: 1;
+                }
+            }
+        }
+        & .owl-dots{
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            @include flexbox();
+            justify-content: center;
+            & .owl-dot{
+                width: 12px;
+                height: 12px;
+                margin: 0 5px;
+                background: transparent;
+                @include border-radius(50%);
+                border: 2px solid rgba($color: $black, $alpha: .3);
+                &.active{
+                    background: $m-blue;
+                    border-color: rgba($color: $m-blue, $alpha: 1.0);
+                }
+            }
+        }
+        &-2{
+            position: relative;
+            & .owl-stage-outer{
+                overflow: visible;
+                & .owl-item{
+                    opacity: 0;
+                    transition: opacity .5s;
+                    &.active{
+                        opacity: 1;
+                    }
+                }
+            }
+            & .owl-dots{
+                position: absolute;
+                bottom: -70px;
+                left: 50%;
+                @include transform(translateX(-50%));
+                @include flexbox();
+                justify-content: center;
+                & .owl-dot{
+                    width: 12px;
+                    height: 12px;
+                    margin: 0 5px;
+                    background: transparent;
+                    @include border-radius(50%);
+                    border: 2px solid rgba($color: $black, $alpha: .3);
+                    &.active{
+                        background: $m-blue;
+                        border-color: rgba($color: $m-blue, $alpha: 1.0);
+                    }
+                }
+            }
+        }
+    }
+    &__item{
+        @include border-radius(10px);
+        padding: 30px;
+        @include box-shadow(0px 30px 60px 0px rgba(8, 0, 42, 0.1));
+    }
+    &__inner{
+        @media #{$sm}{
+            padding-bottom: 0;
+        }
+        @media #{$xs}{
+            padding-bottom: 0;
+        }
+    }
+    &__person{
+        &-wrapper{
+            padding: 25px 40px;
+            display: inline-block;
+            min-width: 280px;
+            @include box-shadow(0px 30px 80px 0px rgba(8, 0, 42, 0.08));
+            background: $white;
+        }
+    }
+    &__avater{
+        & img{
+            width: 50px !important;
+            height: 50px;
+            @include border-radius(50%);
+        }
+    }
+    &__info{
+        & h5{
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 0;
+        }
+        & span{
+            color: $m-blue;
+            font-weight: 600;
+        }
+    }
+    &__text{
+        & p{
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 0;
+        }
+        &-2{
+            padding: 78px 40px;
+            padding-bottom: 40px;
+            @include box-shadow(0px 30px 80px 0px rgba(8, 0, 42, 0.08));
+        }
+    }
+    &__bg{
+        bottom: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @media #{$md}{
+            display: none;
+        }
+        @media #{$sm}{
+            display: none;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+}
+
+.rating{
+    & ul{
+        & li{
+            display: inline-block;
+            & a{
+                font-size: 14px;
+                color: #fd9729;
+            }
+        }
+    }
+}

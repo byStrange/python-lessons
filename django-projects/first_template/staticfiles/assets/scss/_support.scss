@@ -1,0 +1,93 @@
+/*----------------------------------------*/
+/*  14. SUPPORT CSS START
+/*----------------------------------------*/
+
+.support{
+    &__area{}
+    &__item{
+        padding: 50px;
+        @include border-radius(10px);
+        @include box-shadow(0px 30px 70px 0px rgba(8, 0, 42, 0.1));
+
+        @media #{$lg}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$xs}{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &:hover{
+            & .support__icon{
+                & img{
+                    -webkit-transform: translate3d(0,-10px,0);
+                    -moz-transform: translate3d(0,-10px,0);
+                    -ms-transform: translate3d(0,-10px,0);
+                    -o-transform: translate3d(0,-10px,0);
+                    transform: translate3d(0,-10px,0);
+                }
+            }
+        }
+    }
+    &__icon{
+        min-height: 85px;
+        & img{
+            backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -moz-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -ms-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -o-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        }
+    }
+    &__content{
+        & p{
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 35px;
+        }
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 13px;
+    }
+    &__thumb{
+        & img{
+            height: 53px;
+            width: 53px;
+            @include border-radius(50%);
+            border: 3px solid $white;
+            & + img{
+                margin-left: -18px;
+            }
+        }
+        & p{
+            margin-top: 15px;
+            font-size: 14px;
+            color: $black-3;
+            font-weight: 600;
+            & a{
+                color: $body-text-color;
+                &:hover{
+                    color: $m-blue;
+                }
+            }
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: 27%;
+        left: 25%;
+        z-index: -1;
+        & img{
+            max-width: 100%;
+        }
+    }
+}

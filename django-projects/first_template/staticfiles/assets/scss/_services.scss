@@ -1,0 +1,75 @@
+/*----------------------------------------*/
+/*  22. SERVICES CSS START
+/*----------------------------------------*/
+
+.services{
+    &__item{
+        padding: 45px 40px;
+        @include border-radius(10px);
+        @include box-shadow(0px 30px 70px 0px rgba(8, 0, 42, 0.1));
+
+        @media #{$lg}{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        @media #{$xs}{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        &:hover{
+            & .services__icon{
+                & span{
+                    animation: bounce2 1.5s ease infinite;
+                    -webkit-animation: bounce2 1.5s ease infinite;
+                }
+            }
+        }
+
+    }
+    &__icon{
+        & span{
+            display: block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            @include border-radius(6px);
+            &.blue-bg-4{
+                background: rgba($color: $m-blue-4, $alpha: .06);
+            }
+            &.pink-bg{
+                background: rgba($color: $m-pink-2, $alpha: .06);
+            }
+            &.green-bg{
+                background: rgba($color: $m-green-2, $alpha: .06);
+            }
+            &.orange-bg{
+                background: rgba($color: $m-orange, $alpha: .06);
+            }
+            &.blue-bg{
+                background: rgba($color: $m-blue, $alpha: .06);
+            }
+            & img{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    &__title{
+        font-size: 20px;
+        font-weight: 700;
+        & a{
+            &:hover{
+                color: $m-blue;
+            }
+        }
+    }
+    &__content{}
+}
+
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}

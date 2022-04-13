@@ -1,0 +1,22 @@
+/*----------------------------------------*/
+/*  09. BRAND CSS START
+/*----------------------------------------*/
+
+.brand{
+    &__slider{
+        & .owl-stage {
+            @include flexbox();
+            align-items: center;
+        }
+    }
+    &__thumb{
+        & img{
+            margin: auto;
+            width: inherit !important;
+            opacity: .5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

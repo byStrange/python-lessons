@@ -1,0 +1,451 @@
+/*----------------------------------------*/
+/*  19. SIGN CSS START
+/*----------------------------------------*/
+
+.sign{
+    &__wrapper{
+        padding: 50px 70px;
+        padding-bottom: 45px;
+        margin: 0 30px;
+
+        @include border-radius(10px);
+        @include box-shadow(0px 40px 80px 0px rgba(2, 2, 26, 0.14));
+        z-index: 11;
+
+        @media #{$xs}{
+            margin: 0;
+            padding: 30px 20px;
+            padding-bottom: 25px;
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            z-index: -1;
+            &.man-1{
+                left: 28%;
+                top: 60%;
+                z-index: 1;
+                @media #{$xxl}{
+                    left: 19%;
+                }
+                @media #{$xl}{
+                    left: 16%;
+                }
+                @media #{$lg}{
+                    left: 7%;
+                }
+                @media #{$md}{
+                    left: 2%;
+                }
+                @media #{$sm}{
+                    left: 1%;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.man-2{
+                right: 24%;
+                top: 65%;
+                @media #{$xxl}{
+                    top: 55%;
+                    right: 20%;
+                }
+                @media #{$xl}{
+                    top: 60%;
+                    right: 15%;
+                }
+                @media #{$lg}{
+                    top: 60%;
+                    right: 7%;
+                }
+                @media #{$md}{
+                    top: 60%;
+                    right: 0%;
+                    z-index: 1;
+                }
+                @media #{$sm}{
+                    top: 60%;
+                    right: 0%;
+                    z-index: 1;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+                &.man-22{
+                    top: 50%;
+                    @media #{$xxl}{
+                        top: 55%;
+                        right: 20%;
+                    }
+                    @media #{$xl}{
+                        top: 60%;
+                        right: 15%;
+                    }
+                    @media #{$lg}{
+                        top: 60%;
+                        right: 7%;
+                    }
+                    @media #{$md}{
+                        top: 60%;
+                        right: 0%;
+                        z-index: 1;
+                    }
+                    @media #{$sm}{
+                        top: 60%;
+                        right: 0%;
+                        z-index: 1;
+                    }
+                }
+            }
+            &.circle{
+                right: 32%;
+                top: 38%;
+                animation: signCircle 5s linear 0s infinite alternate;
+                -webkit-animation: signCircle 5s linear 0s infinite alternate;
+                @media #{$xxl}{
+                    right: 25%;
+                }
+                @media #{$xl}{
+                    right: 22%;
+                }
+                @media #{$lg}{
+                    right: 11%;
+                }
+                @media #{$md}{
+                    right: 4%;
+                }
+                @media #{$sm}{
+                    right: 2%;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.dot{
+                right: 34%;
+                top: 43%;
+                animation: signDot 5s linear 0s infinite alternate;
+                -webkit-animation: signDot 5s linear 0s infinite alternate;
+                @media #{$xxl}{
+                    right: 29%;
+                }
+                @media #{$xl}{
+                    right: 26%;
+                }
+                @media #{$lg}{
+                    right: 18%;
+                }
+                @media #{$md}{
+                    right: 5%;
+                }
+                @media #{$sm}{
+                    right: 3%;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.bg{
+                left: 33%;
+                top: 26%;
+                opacity: .06;
+                max-width: 100%;
+                animation: signBg 5s linear 0s infinite alternate;
+                -webkit-animation: signBg 5s linear 0s infinite alternate;
+                @media #{$md}{
+                    left: 10%;
+                }
+                @media #{$sm}{
+                    left: 0%;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.zigzag{
+                left: 32%;
+                top: 43%;
+                animation: signZigzag 5s linear 0s infinite alternate;
+                -webkit-animation: signZigzag 5s linear 0s infinite alternate;
+                @media #{$xxl}{
+                    left: 24%;
+                }
+                @media #{$xl}{
+                    left: 23%;
+                }
+                @media #{$lg}{
+                    left: 11%;
+                }
+                @media #{$md}{
+                    left: 3%;
+                }
+                @media #{$sm}{
+                    left: 2%;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.flower{
+                bottom: 13%;
+                right: 30%;
+                @media #{$xxl}{
+                    right: 24%;
+                }
+                @media #{$xl}{
+                    right: 24%;
+                }
+                @media #{$lg}{
+                    right: 12%;
+                }
+                @media #{$md}{
+                    right: 3%;
+                }
+                @media #{$sm}{
+                    right: 1%;
+                }
+                @media #{$xs}{
+                    right: 1%;
+                    bottom: 3%;
+                }
+            }
+        }
+    }
+    &__header{
+        padding: 0 35px;
+        @media #{$sm}{
+            padding: 0 10px;
+        }
+        @media #{$xs}{
+            padding: 0px;
+        }
+        & p{
+            margin-bottom: 0;
+            color: $grey-10;
+            position: relative;
+            padding: 0 40px;
+            display: inline-block;
+            & span{
+                position: absolute;
+                top: 40%;
+                left: 0;
+                @include transform(translateY(-50%));
+                &:last-child{
+                    left: auto;
+                    right: 0;
+                }
+            }
+            & a{
+                &:hover{
+                    color: $m-blue;
+                }
+            }
+        }
+    }
+    &__social{
+        display: block;
+        height: 50px;
+        background: $grey-3;
+        @include border-radius(6px);
+        position: relative;
+        line-height: 48px;
+        padding-left: 23px;
+        z-index: 1;
+        overflow: hidden;
+        font-size: 16px;
+        &::after{
+            position: absolute;
+            content: '';
+            left: -55%;
+            top: 45%;
+            @include transform(translateY(-50%));
+            height: 220px;
+            width: 220px;
+            background: #3360bd;
+            @include border-radius(50%);
+            z-index: -1;
+            @media #{$xs}{
+                left: -62%;
+            }
+        }
+        & i{
+            color: $white;
+            font-size: 16px;
+            margin-right: 50px;
+            @media #{$xs}{
+                margin-right: 35px;
+            }
+        }
+        &:hover{
+            color: $white;
+            &::after{
+                width: 100%;
+                height: 150%;
+                left: 0;
+                @include border-radius(6px);
+            }
+        }
+        &.g-plus{
+            &::after{
+                background: #e93e30;
+            }
+        }
+    }
+    &__form{
+        & h5{
+            font-size: 16px;
+            font-weight: 500;
+            color: $black-3;
+            margin-bottom: 11px;
+        }
+    }
+    &__input{
+        position: relative;
+        &-wrapper{
+
+        }
+        & input{
+            width: 100%;
+            height: 60px;
+            line-height: 52px;
+            padding: 0 50px;
+            font-size: 14px;
+            border: 2px solid transparent;
+            background: $grey-2;
+            color: $black;
+            @include border-radius(6px);
+            &::placeholder{
+                color: $grey-11;
+            }
+            &:focus{
+                outline: none;
+                background: $white;
+                border-color: $m-blue;
+                @include box-shadow(0px 1px 4px 0px rgba(8, 0, 42, 0.2));
+            }
+        }
+        & i{
+            position: absolute;
+            top: 51%;
+            @include transform(translateY(-50%));
+            left: 25px;
+            font-size: 14px;
+            color: $grey-11;
+        }
+    }
+    &__agree{
+        & input{
+            margin: 0;
+            appearance: none;
+            -moz-appearance: none;
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: transparent;
+            border: 1px solid $grey-10;
+            outline: none;
+            margin-top: 2px;
+            @include border-radius(4px);
+            &:checked{
+                position: relative;
+                background-color: $m-blue;
+                border-color: transparent;
+                &::after{
+                    box-sizing: border-box;
+                    content: '\f00c';
+                    position: absolute;
+                    font-family: $fontawesome;
+                    font-size: 10px;
+                    color: $white;
+                    top: 46%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));
+                }
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        & label{
+            padding-left: 10px;
+            font-size: 14px;
+            &:hover{
+                cursor: pointer;
+            }
+            & a{
+                color: $black-3;
+                font-weight: 500;
+                &:hover{
+                    color: $m-blue;
+                }
+            }
+        }
+    }
+    &__forgot{
+        & a{
+            color: $grey-10;
+            &:hover{
+                color: $m-blue;
+            }
+        }
+    }
+    &__new{
+        & p{
+            color: $grey-10;
+            margin-bottom: 0;
+            & a{
+                color: $m-blue;
+            }
+        }
+    }
+}
+
+
+
+@keyframes signDot{
+    0%{
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+}
+
+    100%{
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+}
+}
+
+@keyframes signZigzag{
+    0%{
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+}
+
+    100%{
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+}
+}
+
+@keyframes signCircle{
+    0%{
+    @include transform(rotate(0deg));
+    }
+
+    100%{
+        @include transform(rotate(360deg));
+    }
+}

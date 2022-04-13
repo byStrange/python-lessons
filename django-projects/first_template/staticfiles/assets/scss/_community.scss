@@ -1,0 +1,77 @@
+/*----------------------------------------*/
+/*  13. COMMUNITY CSS START
+/*----------------------------------------*/
+
+.community{
+    &__wrapper{
+
+    }
+    &-map{
+        width: 100%;
+    }
+    &__person{
+        & img{
+            position: absolute;
+            width: 46px;
+            height: 46px;
+            border: 2px solid $white;
+            @include border-radius(50%);
+            @include box-shadow(0px 20px 40px 0px rgba(5, 1, 22, 0.3));
+            &.com-1{
+                top: 20%;
+                left: 10%;
+                @media #{$xs}{
+                    top: -6%;
+                    left: 6%;
+                }
+            }
+            &.com-2{
+                top: 6%;
+                left: 35%;
+                @media #{$xs}{
+                    top: -12%;
+                    left: 33%;
+                }
+            }
+            &.com-3{
+                top: 0%;
+                right: 24%;
+                @media #{$xs}{
+                    top: -11%;
+                    right: 21%;
+                }
+            }
+            &.com-4{
+                bottom: 20%;
+                left: 20%;
+                @media #{$xs}{
+                    bottom: 19%;
+                    left: 15%;
+                }
+            }
+            &.com-5{
+                top: 44%;
+                left: 42%;
+                @media #{$xs}{
+                    left: 38%;
+                }
+            }
+            &.com-6{
+                top: 35%;
+                right: 33%;
+                @media #{$xs}{
+                    top: 36%;
+                    right: 28%;
+                }
+            }
+            &.com-7{
+                bottom: 25%;
+                right: 11%;
+                @media #{$xs}{
+                    bottom: 15%;
+                    right: 4%;
+                }
+            }
+        }
+    }
+}

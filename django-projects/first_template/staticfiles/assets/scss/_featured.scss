@@ -1,0 +1,37 @@
+/*----------------------------------------*/
+/*  21. FEATURED CSS START
+/*----------------------------------------*/
+
+.featured{
+    &__item{
+        @include border-radius(10px);
+        padding: 40px 50px;
+        padding-bottom: 0;
+        @media #{$md}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+        }
+        & p{
+            font-size: 16px;
+            margin-bottom: 55px;
+        }
+    }
+    &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        & a{
+            &:hover{
+                color: $m-blue;
+            }
+        }
+    }
+    &__thumb{
+        & img{
+            @include border-radius(10px 10px 0 0);
+        }
+    }
+}

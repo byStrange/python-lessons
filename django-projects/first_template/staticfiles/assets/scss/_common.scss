@@ -1,0 +1,754 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ body {
+	font-family: $vietnam;
+	font-size: 14px;
+	font-weight: normal;
+	color: $body-text-color;
+	line-height: 24px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+
+.po-rel-z1{
+	position: relative;
+	z-index: 1;
+}
+
+a,
+.btn,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+li,
+img,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include transition(.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover
+{
+	color: inherit;
+	text-decoration: none;
+}
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+}
+button:hover{
+	cursor: pointer;
+}
+button:focus{outline: 0; border:0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $vietnam;
+	color: $heading-color;
+	margin-top: 0px;
+	font-weight: 600;
+	line-height: 1.2;
+	@include transition(.3s);
+}
+
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+p {
+	font-family: $vietnam;
+	font-size: 14px;
+	font-weight: normal;
+	color: $body-text-color;
+	margin-bottom: 15px;
+	line-height: 26px;
+}
+
+*::-moz-selection {
+	background: $m-blue;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $m-blue;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $m-blue;
+	color: $white;
+	text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+/*--
+    - Background color
+-----------------------------------------*/
+.grey-bg {
+	background: $grey;
+}
+.grey-bg-2 {
+	background: $grey-2;
+}
+.grey-bg-3 {
+	background: $grey-3;
+}
+.grey-bg-16 {
+	background: $grey-16;
+}
+.grey-bg-17 {
+	background: $grey-17;
+}
+.grey-bg-18 {
+	background: $grey-18;
+}
+
+.blue-bg {
+	background: $m-blue;
+}
+
+
+.white-bg {
+	background:$white;
+}
+.black-bg {
+	background: $black;
+}
+
+.footer-bg {
+	background: $footer-bg;
+}
+
+.footer-bg-2 {
+	background: $footer-bg-2;
+}
+
+
+// .primary-bg {
+// 	background: #222;
+// }
+
+/*--
+    - color
+-----------------------------------------*/
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: $white !important;
+}
+
+.white-color {
+	color: $white;
+}
+
+.theme-color {
+	color: $m-blue !important;
+}
+.black-color {
+	color: $black;
+}
+
+// spacing 
+
+.mt-330{
+	margin-top: 330px;
+}
+
+.mt--40{
+	margin-top: -40px;
+}
+
+/* btn */
+
+.m-btn{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 35px;
+	color: $white;
+	background: $m-blue;
+	text-align: center;
+	@include border-radius(6px);
+	font-weight: 500;
+	font-size: 16px;
+	text-transform: capitalize; 
+	position: relative;
+	z-index: 1;
+	&:hover{
+		color: $white;
+		@include box-shadow(0px 14px 20px 0px rgba(37, 17, 124, 0.16));
+	}
+	&-2{
+		height: 44px;
+		line-height: 42px;
+		font-size: 14px;
+	}
+	&-3{
+		height: 46px;
+		line-height: 42px;
+		padding: 0 15px;
+	}
+	&-4{
+		height: 50px;
+		line-height: 46px;
+		padding: 0 30px;
+	}
+	&-5{
+		height: 34px;
+		line-height: 30px;
+		padding: 0 25px;
+		font-size: 14px;
+	}
+	&-border{
+		height: 46px;
+		line-height: 40px;
+		font-size: 14px;
+		font-weight: 700;
+		border: 2px solid $border;
+		color: $m-blue;
+		background: transparent;
+		&:hover{
+			color: $white;
+			border-color: $m-blue;
+			background: $m-blue;
+		}
+		&-2{
+			height: 50px;
+			line-height: 46px;
+			border: 2px solid $border;
+			color: $black;
+			padding: 0 30px;
+			font-size: 14px;
+			background: transparent;
+			&:hover{
+				color: $white;
+				background: $m-blue;
+				border-color: $m-blue;
+			}
+			& span{
+				background: $m-blue-2;
+			}
+		}
+		&-3{
+			&:hover{
+				background: $m-blue;
+				color: $white;
+				border-color: $m-blue;
+			}
+		}
+		&-4{
+			background: transparent;
+			height: 50px;
+			line-height: 44px;
+			border: 2px solid rgba($color: $white, $alpha: .3);
+			& span{
+				background: $white;
+			}
+			&:hover{
+				background: $white;
+				border-color: $white;
+				color: $black;
+			}
+		}
+		&-5{
+			height: 40px;
+			line-height: 32px;
+		}
+		&-6{
+			height: 34px;
+			line-height: 26px;
+			padding: 0 25px;
+		}
+	}
+	&-black{
+		background: $black;
+		color: $white;
+		&:hover{
+			color: $white;
+			background: $black;
+		}
+	}
+	&-white{
+		background: $white;
+		color: $black;
+		font-size: 14px;
+		height: 40px;
+		line-height: 36px;
+		padding: 0 24px;
+		&:hover{
+			color: $black;
+			background: $white;
+		}
+	}
+	&-white-2{
+		background: $white;
+		color: $black;
+		height: 50px;
+		line-height: 46px;
+		&:hover{
+			background: $white;
+			color: $black;
+		}
+	}
+}
+
+
+
+
+/* section title */
+
+.section{
+	&__title{
+		font-size: 40px;
+        font-weight: 800;
+		margin-bottom: 15px;
+		@media #{$xs}{
+			font-size: 30px;
+		}
+		& span{
+			color: $m-blue;
+		}
+		&-wrapper{
+			& p{
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+// link btn
+
+.link-btn{
+	position: relative;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: capitalize;
+	& i{
+		font-size: 18px;
+		position: absolute;
+		right: 10px;
+		top: 58%;
+		@include transform(translateX(10px) translateY(-50%));
+		visibility: hidden;
+		opacity: 0;
+		@include transition(.2s);
+	}
+	&:hover{
+		color: $m-blue;
+		& > i{
+			right: -14px;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+ /* over lay css*/
+.body-overlay{
+    background-color: rgba($color: #000000, $alpha: .5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(.3s);
+}
+.body-overlay.opened{
+	opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* bg shape area */
+
+
+.bg-shape{
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: -1;
+	& img{
+		width: 100%;
+	}
+}
+
+
+
+/* basic pagination */
+
+.basic-pagination{
+	& ul{
+		& li{
+			display: inline-block;
+			margin-right: 10px;
+			@media #{$xs}{
+				margin-right: 5px;
+			}
+			&.active{
+				& a{
+					color: $white;
+					background: $m-blue;
+				}
+			}
+			& a{
+				position: relative;
+				overflow: hidden;
+				background: transparent;
+				font-size: 20px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				@include border-radius(4px);
+				font-weight: 500;
+				font-size: 16px;
+				&:hover{
+					background: $m-blue;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+
+/* page title area */
+
+.page{
+	&__title{
+		font-size: 50px;
+		font-weight: 800;
+		margin-bottom: 3px;
+		@media #{$lg}{
+			font-size: 40px;
+		}
+		@media #{$sm}{
+			font-size: 35px;
+		}
+		@media #{$xs}{
+			font-size: 30px;
+		}
+		&-content{
+			& .breadcrumb{
+                padding: 0;
+                background-color: transparent;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+                margin-bottom: 0;
+                &-item{
+					position: relative;
+					font-weight: 500;
+					& + ::before{
+						position: absolute;
+						top: 52%;
+						left: -4px;
+						@include transform(translateY(-50%));
+						content: '\f105';
+						font-size: 15px;
+						font-family: $fontawesome;
+						color: $body-text-color;
+					}
+					& + .breadcrumb-item{
+						padding-left: 13px;
+						margin-left: 13px;
+					}
+					& a{
+						font-weight: 500;
+						font-size: 15px;
+						color: $body-text-color;
+						&:hover{
+							color: $m-blue;
+						}
+					}
+                }
+            }
+		}
+	}
+	&__title-2{
+		font-size: 50px;
+		line-height: 1.09;
+		color: $black-3;
+		font-weight: 800;
+		margin-bottom: 12px;
+		@media #{$sm}{
+			font-size: 40px;
+		}
+		@media #{$xs}{
+			font-size: 32px;
+		}
+	}
+	&-wrapper{
+		& p{
+			font-size: 16px;
+		}
+	}
+}
+
+
+/* opacity */
+
+.opacity-7{
+	opacity: .7;
+}
+
+/* social */
+.m-social{
+	& ul{
+		& li{
+			display: inline-block;
+			margin-right: 10px;
+			& a{
+				font-size: 14px;
+				display: inline-block;
+				width: 76px;
+				height: 36px;
+				line-height: 30px;
+				border: 2px solid $white;
+				text-align: center;
+				color: $white;
+				background: $black;
+				@include border-radius(6px);
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+				&::after{
+					position: absolute;
+					content: "";
+					z-index: -1;
+					display: block;
+					padding: 0.85em 0.75em;
+					left: -20%;
+					right: -20%;
+					top: 0;
+					bottom: 0;
+					transform: skewX(45deg) scale(0, 1);
+					background: #fff;
+				}
+				&:hover{
+					&::after{
+						transform: skewX(45deg) scale(1, 1);
+					}
+				}
+				&.fb{
+					background: #285da1;
+					border-color: #285da1;
+					&:hover{
+						color: #285da1;
+					}
+				}
+				&.tw{
+					background: #03a9f4;                        
+					border-color: #03a9f4;
+					&:hover{
+						color: #03a9f4;
+					}                        
+				}
+				&.pin{
+					background: #d2173f;                        
+					border-color: #d2173f;
+					&:hover{
+						color: #d2173f;
+					}                        
+				}
+				&.link{
+					background: #087ab6;
+					border-color: #087ab6;
+					&:hover{
+						color: #087ab6;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* gradient colors */
+
+.gradient-pink{
+	background-image: -moz-linear-gradient( 60deg, rgb(225,25,158) 0%, rgb(106,20,209) 100%);
+	background-image: -webkit-linear-gradient( 60deg, rgb(225,25,158) 0%, rgb(106,20,209) 100%);
+	background-image: -ms-linear-gradient( 60deg, rgb(225,25,158) 0%, rgb(106,20,209) 100%);
+	background-image:  linear-gradient( 60deg, rgb(225,25,158) 0%, rgb(106,20,209) 100%);
+}
+
+.gradient-pink-2{
+	background-image: -moz-linear-gradient( 90deg, rgb(247,127,254) 0%, rgb(247,60,170) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(247,127,254) 0%, rgb(247,60,170) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(247,127,254) 0%, rgb(247,60,170) 100%);
+	background-image: linear-gradient( 90deg, rgb(247,127,254) 0%, rgb(247,60,170) 100%);
+}
+
+.gradient-yellow{
+	background-image: -moz-linear-gradient(to left bottom, #ff8b3a, #ffa03e, #ffb445, #ffc750, #ffda5f);
+	background-image: -webkit-linear-gradient(to left bottom, #ff8b3a, #ffa03e, #ffb445, #ffc750, #ffda5f);
+	background-image: -ms-linear-gradient(to left bottom, #ff8b3a, #ffa03e, #ffb445, #ffc750, #ffda5f);
+	background-image: linear-gradient(to left bottom, #ff8b3a, #ffa03e, #ffb445, #ffc750, #ffda5f);
+}
+.gradient-blue{
+	background-image: -moz-linear-gradient( 60deg, rgb(69,59,198) 0%, rgb(45,128,253) 100%);
+	background-image: -webkit-linear-gradient( 60deg, rgb(69,59,198) 0%, rgb(45,128,253) 100%);
+	background-image: -ms-linear-gradient( 60deg, rgb(69,59,198) 0%, rgb(45,128,253) 100%);
+	background-image: linear-gradient( 60deg, rgb(69,59,198) 0%, rgb(45,128,253) 100%);
+}
+.gradient-blue-2{
+	background-image: -moz-linear-gradient( -134deg, rgb(72,106,254) 0%, rgb(102,205,255) 100%);
+	background-image: -webkit-linear-gradient( -134deg, rgb(72,106,254) 0%, rgb(102,205,255) 100%);
+	background-image: -ms-linear-gradient( -134deg, rgb(72,106,254) 0%, rgb(102,205,255) 100%);
+	background-image: linear-gradient( -134deg, rgb(72,106,254) 0%, rgb(102,205,255) 100%);
+}
+.gradient-blue-3{
+	background-image: -moz-linear-gradient( 120deg, rgb(102,145,255) 0%, rgb(102,209,255) 100%);
+	background-image: -webkit-linear-gradient( 120deg, rgb(102,145,255) 0%, rgb(102,209,255) 100%);
+	background-image: -ms-linear-gradient( 120deg, rgb(102,145,255) 0%, rgb(102,209,255) 100%);
+	background-image: linear-gradient( 120deg, rgb(102,145,255) 0%, rgb(102,209,255) 100%);
+}
+.gradient-blue-4{
+	background-image: -moz-linear-gradient( 40deg, rgb(99,132,255) 0%, rgb(16,242,223) 100%);
+	background-image: -webkit-linear-gradient( 40deg, rgb(99,132,255) 0%, rgb(16,242,223) 100%);
+	background-image: -ms-linear-gradient( 40deg, rgb(99,132,255) 0%, rgb(16,242,223) 100%);
+	background-image: linear-gradient( 40deg, rgb(99,132,255) 0%, rgb(16,242,223) 100%);
+}
+.gradient-orange{
+	background-image: -moz-linear-gradient( 60deg, rgb(241,65,65) 0%, rgb(252,164,50) 100%);
+	background-image: -webkit-linear-gradient( 60deg, rgb(241,65,65) 0%, rgb(252,164,50) 100%);
+	background-image: -ms-linear-gradient( 60deg, rgb(241,65,65) 0%, rgb(252,164,50) 100%);
+	background-image: -linear-gradient( 60deg, rgb(241,65,65) 0%, rgb(252,164,50) 100%);
+}
+.gradient-purple{
+	background-image: -moz-linear-gradient( 60deg, rgb(101,47,192) 0%, rgb(135,105,233) 100%);
+	background-image: -webkit-linear-gradient( 60deg, rgb(101,47,192) 0%, rgb(135,105,233) 100%);
+	background-image: -ms-linear-gradient( 60deg, rgb(101,47,192) 0%, rgb(135,105,233) 100%);
+	background-image: linear-gradient( 60deg, rgb(101,47,192) 0%, rgb(135,105,233) 100%);
+}
+.gradient-purple-2{
+	background-image: -moz-linear-gradient( 32deg, rgb(253,120,253) 0%, rgb(141,120,254) 100%);
+	background-image: -webkit-linear-gradient( 32deg, rgb(253,120,253) 0%, rgb(141,120,254) 100%);
+	background-image: -ms-linear-gradient( 32deg, rgb(253,120,253) 0%, rgb(141,120,254) 100%);
+	background-image: -linear-gradient( 32deg, rgb(253,120,253) 0%, rgb(141,120,254) 100%);
+}

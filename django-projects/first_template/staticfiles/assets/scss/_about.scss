@@ -1,0 +1,115 @@
+/*----------------------------------------*/
+/*  12. ABOUT CSS START
+/*----------------------------------------*/
+
+
+.about{
+    &__wrapper{
+    }
+    &__sub-title{
+        font-size: 16px;
+        font-weight: 600;
+        color: $m-blue;
+    }
+    &__title{
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 55px;
+        @media #{$md}{
+            font-size: 40px;
+        }
+        @media #{$sm}{
+            font-size: 30px;
+        }
+        @media #{$xs}{
+            font-size: 25px;
+        }
+    }
+    &__count{
+        &-item{
+            padding: 40px;
+            @include border-radius(6px);
+            @media #{$md}{
+                padding: 30px;
+            }
+            & > p{
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $black;
+                letter-spacing: 2px;
+                margin-bottom: 5px;
+                line-height: 1;
+            }
+            & h4{
+                font-size: 50px;
+                font-weight: 700;
+                margin-bottom: 0;
+                line-height: 1;
+                @media #{$md}{
+                    font-size: 40px;
+                }
+            }
+            &.launche{
+                background: rgba($color: $m-blue-3, $alpha: .06);
+                & h4{
+                    color: $m-blue-3;
+                }
+            }
+            &.community{
+                background: rgba($color: $m-green, $alpha: .06);
+                & h4{
+                    color: $m-green;
+                }
+            }
+            &.mission{
+                background: rgba($color: $m-pink, $alpha: .06);
+                & h4{
+                    color: $m-pink;
+                }
+            }
+        }
+    }
+    &__thumb{
+        @include box-shadow(0px 40px 50px 0px rgba(8, 0, 42, 0.1));
+        & img{
+            @include border-radius(10px);
+        }
+    }
+    &__text{
+        font-size: 24px;
+        line-height: 40px;
+        color: $black-3;
+        font-weight: 500;
+        padding-right: 100px;
+        margin-bottom: 20px;
+        @media #{$xl}{
+            padding-right: 50px;
+        }
+        @media #{$md}{
+            padding-right: 0px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        @media #{$sm}{
+            padding-right: 0px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        @media #{$xs}{
+            padding-right: 0px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+    &__sub-text{
+        font-size: 16px;
+        padding-right: 95px;
+        @media #{$sm}{
+            padding-right: 0px;
+        }
+        @media #{$xs}{
+            padding-right: 0px;
+        }
+    }
+}

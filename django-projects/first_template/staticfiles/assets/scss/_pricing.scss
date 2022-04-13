@@ -1,0 +1,191 @@
+/*----------------------------------------*/
+/*  18. PRICING CSS START
+/*----------------------------------------*/
+
+
+.pricing{
+    &__header{
+        & h3{
+            font-size: 20px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 2px;
+        }
+        & p{
+
+        }
+    }
+    &__tag{
+        & span{
+            font-size: 20px;
+            color: $black;
+            font-weight: 500;
+        }
+        & h4{
+            font-size: 50px;
+            color: $black;
+            line-height: 33px;
+        }
+    }
+    &__features{
+        & ul{
+            & li{
+                font-weight: 500;
+                position: relative;
+                padding-left: 32px;
+                line-height: 1;
+                font-size: 14px;
+                margin-bottom: 14px;
+                &::after{
+                    position: absolute;
+                    content: '\f00c';
+                    font-family: $fontawesome;
+                    font-size: 11px;
+                    text-align: center;
+                    color: $m-blue;
+                    left: 0;
+                    top: 0;
+                    width: 18px;
+                    height: 18px;
+                    line-height: 18px;
+                    @include border-radius(4px);
+                    background: $grey-9;
+                }
+            }
+        }
+    }
+    &__item{
+        padding: 30px;
+        padding-bottom: 25px;
+        border: 2px solid $border-6;
+        @include border-radius(10px);
+        &.active{
+            background: $m-blue;
+            border-color: $m-blue;
+            & .pricing__header{
+                & h3{
+                    color: $white;
+                }
+                & p{
+                    color: $white;
+                    opacity: .7;
+                }
+            }
+            & .pricing__tag{
+                & span{
+                    color: $white;
+                }
+                & h4{
+                    color: $white;
+                }
+            }
+            & .pricing__switch{
+                & button{
+                    color: $white;
+                    opacity: .8;
+                }
+            }
+            & .pricing__buy{
+                & a{
+                    color: $black;
+                    background: $white;
+                    border-color: $white;
+                    & span{
+                        background: $white;
+                    }
+                }
+            }
+            & .pricing__features{
+                & ul{
+                    & li{
+                        color: $white;
+                        &::after{
+                            background: rgba($color: $white, $alpha: .08);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__switch{
+        & button{
+            font-size: 12px;
+            color: $m-blue;
+            background: transparent;
+        }
+    }
+    &__tab{
+        & .nav-tabs{
+            border: none;
+        }
+        & .nav{
+            & .nav-item{
+                & .nav-link{
+                    padding: 0;
+                    padding-right: 90px;
+                    background: transparent;
+                    border-radius: 0;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    -ms-border-radius: 0;
+                    -o-border-radius: 0;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: $black;
+                    position: relative;
+                    outline: none;
+                    font-size: 14px;
+                    border: none;
+                    &:focus{
+                        outline: none;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        right: 15px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        background: $m-blue;
+                        width: 54px;
+                        height: 22px;
+                        @include border-radius(11px);
+                    }
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        right: 20px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        width: 16px;
+                        height: 16px;
+                        @include border-radius(50%);
+                        background: $white;
+                        z-index: 1;
+                    }
+                    &.active{
+                        color: $m-blue;
+                        border: none;
+                        &::before{
+                            right: 49px;
+                        }
+                    }
+                    &:hover{
+                        color: $m-blue;
+                    }
+                }
+                &:last-child{
+                    & .nav-link{
+                        padding-right: 0;
+                        &::after{
+                            display: none;
+                        }
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

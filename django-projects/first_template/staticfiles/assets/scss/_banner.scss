@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+/*  11. BANNER CSS START
+/*----------------------------------------*/
+
+.banner{
+    &__item{
+        padding: 45px 40px;
+        padding-right: 230px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+        @include border-radius(10px);
+        @media #{$lg}{
+            padding-right: 125px;
+        }
+        @media #{$md}{
+            padding: 25px 20px;
+        }
+        @media #{$sm}{
+            padding-right: 140px;
+        }
+        @media #{$xs}{
+            padding: 25px;
+        }
+        & p{
+            font-size: 14px;
+            line-height: 24px;
+            color: $white;
+            margin-bottom: 32px;
+        }
+        & .banner__more{
+            &:hover{
+                @include box-shadow(0px 16px 20px 0px rgba(13, 3, 55, 0.2));
+            }
+        }
+    }
+    &__title{
+        font-size: 24px;
+        line-height: 30px;
+        color: $white;
+        font-weight: 800;
+        margin-bottom: 18px;
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+}

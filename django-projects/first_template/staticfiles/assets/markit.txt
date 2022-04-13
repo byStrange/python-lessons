@@ -1,0 +1,1 @@
+sass --watch D:\Dropbox\markit\assets\scss\main.scss:D:\Dropbox\markit\assets\css\style.css

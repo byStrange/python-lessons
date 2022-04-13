@@ -1,0 +1,187 @@
+/*----------------------------------------*/
+/*  06. SUBSCRIBE CSS START
+/*----------------------------------------*/
+
+.subscribe{
+    &__area{
+        @include background();
+    }
+    &__title{
+        font-size: 40px;
+        color: $white;
+        font-weight: 800;
+        margin-bottom: 13px;
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    &__content{
+        & p{
+            font-size: 18px;
+            color: $white;
+            opacity: .8;
+            margin-bottom: 40px;
+            @media #{$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &__form{
+        & input{
+            width: 410px;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 30px;
+            border: none;
+            @include border-radius(6px);
+            @include box-shadow(0px 20px 30px 0px rgba(8, 0, 42, 0.14));
+            margin-right: 20px;
+            &::placeholder{
+                color: $black-soft;
+                font-weight: 500;
+            }
+            &:focus{
+                outline: none;
+            }
+            @media #{$sm}{
+                margin-bottom: 15px;
+            }
+            @media #{$xs}{
+                margin-bottom: 15px;
+            }
+            @media #{$xs}{
+                width: 100%;
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+        & button{
+            &:hover{
+                @include box-shadow(0px 20px 30px 0px rgba(8, 0, 42, 0.14));
+            }
+        }
+        & p{
+            color: $white;
+            opacity: .7;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+    }
+    &__icon{
+        & img{
+            position: absolute;
+            background: transparent;
+            animation: subscribeIcon .6s linear 0s infinite alternate;
+            -webkit-animation: subscribeIcon .6s linear 0s infinite alternate;
+            @include border-radius(50%);
+            &.ps{
+                top: 69%;
+                left: 19%;
+                @media #{$xl}{
+                    left: 5%;
+                }
+                @media #{$lg}{
+                    left: 5%;
+                }
+                @media #{$md}{
+                    left: 5%;
+                }
+                @media #{$sm}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.wp {
+                top: 40%;
+                left: 25%;
+                @media #{$xl}{
+                    left: 14%;
+                }
+                @media #{$lg}{
+                    top: 35%;
+                    left: 9%;
+                }
+                @media #{$md}{
+                    top: 30%;
+                    left: 7%;
+                }
+                @media #{$sm}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.html {
+                right: 17%;
+                top: 30%;
+                @media #{$lg}{
+                    right: 13%;
+                }
+                @media #{$md}{
+                    right: 5%;
+                }
+                @media #{$sm}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.f {
+                right: 5%;
+                top: 55%;
+                @media #{$lg}{
+                    right: 4%;
+                }
+                @media #{$md}{
+                    top: 46%;
+                    right: 2%;
+                }
+                @media #{$sm}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &.man {
+                right: 22%;
+                bottom: 7%;
+                @include border-radius(0%);
+                box-shadow: none !important;
+                @media #{$xl}{
+                    right: 14%;
+                }
+                @media #{$lg}{
+                    right: 9%;
+                }
+                @media #{$md}{
+                    right: 2%;
+                    bottom: 2%;
+                }
+                @media #{$sm}{
+                    right: 5%;
+                    bottom: 2%;
+                }
+                @media #{$xs}{
+                    right: 5%;
+                    bottom: 2%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes subscribeIcon{
+    0%{
+        @include box-shadow(0px 30px 40px 0px rgba(8, 0, 42, 0));
+    }
+
+    100%{
+        @include box-shadow(0px 30px 40px 0px rgba(8, 0, 42, 0.24));
+    }
+}
