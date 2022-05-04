@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Card, Blog
 # Create your views here.
 
 def index(request):
@@ -9,10 +9,22 @@ def contact(request):
     return render(request, 'contact.html')
 
 def blog(request):
-    return render(request, 'blog.html')
+    blogs = Blog.objects.all()
+    return render(request, 'blog.html', {'blogs': blogs})
 
 def product(request):
-    return render(request, 'product.html')
+    cards = Card.objects.all()
+    context = {
+        'cards': cards
+    }
+    return render(request, 'product.html', context)
+
+def product_detail(request, slug):
+    card = Card.objects.get(slug=slug)
+    context = {
+        'card': card
+    }
+    return render(request, 'product-details.html', context)
 
 def contact(request):
     return render(request, 'contact.html')

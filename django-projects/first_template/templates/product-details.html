@@ -1,4 +1,6 @@
+{% extends 'base/base.html'%}
 
+{% block content %}
       <!-- cart mini area start -->
       <div class="cartmini__area">
          <div class="cartmini__wrapper">
@@ -160,7 +162,7 @@
                   <div class="col-xxl-8 col-xl-8 col-lg-8">
                      <div class="product__wrapper">
                         <div class="product__details-thumb w-img mb-30">
-                           <img src="/static/assets/img/product/details/pro-de-1.jpg" alt="product-details">
+                           <img src="{{ card.image.url }}" alt="product-details">
                         </div>
                         <div class="product__details-content">
                            <div class="product__tab mb-40">
@@ -328,19 +330,19 @@
                               <div class="product__prorietor-info mb-20 d-flex justify-content-between">
                                  <div class="product__proprietor-avater d-flex align-items-center">
                                     <div class="product__proprietor-thumb">
-                                       <img src="/static/assets/img/product/proprietor/proprietor-1.jpg" alt="">
+                                       <img src="{{ card.author.user_image.url }}" alt="">
                                     </div>
                                     <div class="product__proprietor-name">
-                                       <h5><a href="/static/#">Justin Case</a></h5>
+                                       <h5><a href="/static/#">{{ card.author.name }}</a></h5>
                                        <a href="/static/#">View Profile</a>
                                     </div>
                                  </div>
                                  <div class="product__proprietor-price">
-                                    <span class="d-flex align-items-start"><span>$</span>49</span>
+                                    <span class="d-flex align-items-start"><span>$</span>{{ card.price }}</span>
                                  </div>
                               </div>
                               <div class="product__proprietor-text">
-                                 <p>Jeffrey arse over tit give us a bell old posh morish wellies cheeky.</p>
+                                 <p>{{ card.author.some }}</p>
                               </div>
                            </div>
                            <div class="product__proprietor-body fix">
@@ -351,7 +353,7 @@
                                  </li>
                                  <li>
                                     <h6>Released On:</h6>
-                                    <span>16 February 2021</span>
+                                    <span>{{ card.created_at }}</span>
                                  </li>
                                  <li>
                                     <h6>Version:</h6>
@@ -412,4 +414,4 @@
          <!-- subscribe area end --> 
       </main>
 
-{% include 'base/footer.html' %}
+{% endblock %}

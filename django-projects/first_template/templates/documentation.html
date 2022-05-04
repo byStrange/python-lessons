@@ -1,4 +1,6 @@
-{% include 'base/header.html'%}
+{% extends 'base/base.html' %}
+
+   {% block content %}
       <!-- cart mini area start -->
       <div class="cartmini__area">
          <div class="cartmini__wrapper">
@@ -428,4 +430,4 @@
          <!-- community area end -->
       </main>
 
-{% include 'base/footer.html' %}
+{% endblock %}

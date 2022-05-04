@@ -1,5 +1,7 @@
-{% include 'base/header.html'%}
-      <!-- cart mini area start -->
+{% extends 'base/base.html' %}
+        
+   {% block content %}      
+<!-- cart mini area start -->
       <div class="cartmini__area">
          <div class="cartmini__wrapper">
             <div class="cartmini__title">
@@ -426,6 +428,4 @@
          </section>
          <!-- subscribe area end --> 
       </main>
-
-
-   {% include 'base/footer.html'%}
+{% endblock %}
