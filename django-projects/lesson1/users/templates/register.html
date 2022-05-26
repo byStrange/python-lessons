@@ -1,0 +1,11 @@
+{% extends 'wrapper.html' %}
+
+{% block body %}
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="name" placeholder="Name" />
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password" />
+  <input type="submit" name="submit" value="submit" />
+</form>
+{% endblock %}

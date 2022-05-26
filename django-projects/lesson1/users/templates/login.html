@@ -1,0 +1,14 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+<div class="form container">
+  <h1>Login</h1>
+  <form method="POST">
+    <input type="text" placeholder="email" name="username" />
+    <br />
+    <input type="password" placeholder="password" name="password" />
+    <br />
+    <button class="btn" type="submit">Login</button>
+  </form>
+</div>
+{% endblock %}
